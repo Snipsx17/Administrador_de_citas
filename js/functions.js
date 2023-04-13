@@ -94,7 +94,8 @@ export function validaCita(e) {
   e.preventDefault();
   const { mascota, propietario, telefono, fecha, hora, sintomas } = objCita;
 
-  if (!mascota && !propietario && !telefono && !fecha && !hora && !sintomas) {
+  console.log(objCita)
+  if (!mascota || !propietario || !telefono || !fecha || !hora || !sintomas) {
     ui.imprimirMensaje("Debe rellenar todos los campos", "error");
     return;
   }
